@@ -3,7 +3,8 @@ package model;
 public class Encryption {
         static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-        public static String encryption(String oMessage, int Key ){
+
+    public static String encryption(String oMessage, int Key ){
             oMessage = oMessage.toUpperCase();
             String cMessage = "";
             for(int i = 0; i < oMessage.length(); i++){
@@ -13,9 +14,12 @@ public class Encryption {
                 int newIndex = (charIndex + Key) % 26;
                 char cipherChar = alphabet.charAt(newIndex);
                 cMessage = cMessage + cipherChar;
+
             }
-            return cMessage;
+            return oMessage;
         }
-    }
+
+
+}
 
 
