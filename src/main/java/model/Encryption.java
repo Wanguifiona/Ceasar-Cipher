@@ -16,7 +16,7 @@ public class Encryption {
                 cMessage = cMessage + cipherChar;
 
             }
-            return oMessage;
+            return cMessage;
         }
 
 
