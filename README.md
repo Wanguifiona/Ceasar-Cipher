@@ -4,7 +4,7 @@ A Caesar cipher is a type of substitution in which each letter is shifted a cert
 
 ### Author
 
-Fiona Wangui
+Fiona Maina.
 
 ### Contact
 
