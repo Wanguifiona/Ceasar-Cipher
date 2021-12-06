@@ -14,11 +14,11 @@ fiona.maina@student.moringaschool.com
 * Java
 
 ##### Setup/Installation Requirements
-* git clone https://github.com/Wanguifiona/Ceasar-Cipher.git
+* git clone https://github.com/Wanguifiona/Ceasar-Cipher.git.
 
-* cd/path/to/Caesar-Cipher/
+* cd/path/to/Caesar-Cipher/.
 
-* Open with intellij IDEA
+* Open with intellij IDEA.
 
 ## Known bugs
 
