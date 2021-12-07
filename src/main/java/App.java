@@ -3,8 +3,9 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 
 
-import static model.Decryption.decryption;
-import static model.Encryption.encryption;
+import static model.CeasarCipher.decryption;
+import static model.CeasarCipher.encryption;
+
 
 
 public class App {
