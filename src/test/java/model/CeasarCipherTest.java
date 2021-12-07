@@ -14,19 +14,11 @@ public class CeasarCipherTest {
         assertEquals(oMessage, CeasarCipher.encryption("ceasar cipher", 1));
     }
     @Test
-    public void encryption_checkEmptyString(){
-        CeasarCipher newCeasarCipher = new CeasarCipher();
-        String oMessage = "";
-        assertEquals(oMessage,CeasarCipher.encryption("ceasar cipher,", 1 ) );
-
-    }
-    @Test
     public void encryption_testForMessage() {
         CeasarCipher newCeasarCipher = new CeasarCipher();
         String Letter = "I";
         assertEquals(Letter, CeasarCipher.encryption("H", 1));
     }
-
 
 
     @Test
@@ -35,13 +27,7 @@ public class CeasarCipherTest {
         String cMessage = "CEASAR CIPHER";
         assertEquals(cMessage, CeasarCipher.decryption("ceasar cipher", 1));
     }
-    @Test
-    public void decryption_checkEmptyString(){
-        CeasarCipher newCeasarCipher = new CeasarCipher();
-        String oMessage = "";
-        assertEquals(oMessage,CeasarCipher.decryption("ceasar cipher,", 1 ) );
 
-    }
     @Test
     public void decryption_testForMessage() {
         CeasarCipher newCeasarCipher = new CeasarCipher();
