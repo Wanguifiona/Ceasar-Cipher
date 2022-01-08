@@ -3,40 +3,49 @@
 package model;
 
 public class CeasarCipher {
-    private static String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+    private int shift = 9;
 
+    public static StringBuffer encryption(String oMessage, int shift ){
 
-    public static String encryption(String oMessage, int Key ){
-        oMessage = oMessage.toUpperCase();
-        String cMessage = "";
+        StringBuffer result = new StringBuffer();
         for(int i = 0; i < oMessage.length(); i++){
-            int charIndex = alphabet.indexOf(oMessage.charAt(i));
-            //example i = 8(index)
-            // encryption  i = 8 + 9(key) = 17 = r
-            int newIndex = (charIndex + Key) % 26;
-            char cipherChar = alphabet.charAt(newIndex);
-            cMessage = cMessage + cipherChar;
-
-        }
-        return cMessage;
-    }
-    public static String decryption(String cMessage, int Key ){
-        cMessage = cMessage.toUpperCase();
-        String oMessage = "";
-        for(int i = 0; i < cMessage.length(); i++) {
-            int charIndex = alphabet.indexOf(cMessage.charAt(i));
-            int newIndex = (charIndex - Key) % 26;
-            if (newIndex<0){
-                newIndex = alphabet.length() + newIndex;
+            if (Character.isUpperCase(oMessage.charAt(i))) {
+                char ch = (char) (((int) oMessage.charAt(i) +
+                        shift - 65) % 26 + 65);
+                result.append(ch);
+            }else {
+                char ch = (char) (((int) oMessage.charAt(i) +
+                        shift - 97) % 26 + 97);
+                result.append(ch);
             }
-            char ordinaryChar = alphabet.charAt(newIndex);
-            oMessage = oMessage + ordinaryChar;
-
         }
-        return oMessage;
+        return result;
+    }
 
 
+
+
+    public static StringBuffer decryption(String cMessage, int shift ){
+
+        StringBuffer result = new StringBuffer();
+
+        for (int i = 0; i < cMessage.length(); i++) {
+            if (Character.isUpperCase(cMessage.charAt(i))) {
+                char ch = (char) (((int) cMessage.charAt(i) +
+                        shift - 65) % 26 + 65);
+                result.append(ch);
+            } else {
+                char ch = (char) (((int) cMessage.charAt(i) +
+                        shift - 97) % 26 + 97);
+                result.append(ch);
+            }
+        }
+        return result;
+    }
+
+    public int getShift() {
+        return shift;
     }
 
 
