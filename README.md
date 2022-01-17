@@ -20,6 +20,8 @@ fiona.maina@student.moringaschool.com
 
 * Open with intellij IDEA.
 
+Use: javac.App && java App to compile and run the application
+
 ## Known bugs
 
 If you find a bug the website couldn't handle the query and or gave undesired results),kindly open on issue here by including your search query and the expected result.
